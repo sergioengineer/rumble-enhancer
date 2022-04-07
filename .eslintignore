@@ -1,0 +1,6 @@
+node_modules
+prisma
+.next
+public
+project
+websocket/node_modules

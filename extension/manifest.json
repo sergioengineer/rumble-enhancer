@@ -1,0 +1,29 @@
+{
+  "permissions": [
+    "debugger",
+    "declarativeNetRequest",
+    "pageCapture",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://rumble.com/*"],
+      "js": ["scripts/content.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["dist/*", "dist/assets/*"],
+      "matches": ["https://rumble.com/*"]
+    }
+  ],
+  "description": "Rumble enhancer",
+  "manifest_version": 3,
+  "name": "Rumble enhancer",
+  "version": "1.0"
+}

@@ -1,0 +1,50 @@
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa; /* or add it to the track */
+}
+::-webkit-scrollbar-thumb {
+  background: #1f1f1f;
+}
+
+body {
+  --mainMenuWidth: 200px;
+
+  background: #181818 !important;
+  padding-left: calc(var(--mainMenuWidth) + 20px) !important;
+}
+
+header {
+  background: #1f1f1f !important;
+  box-shadow: none !important;
+}
+.header-user-name {
+  color: #fff !important;
+}
+.constrained {
+  max-width: 100% !important;
+}
+
+.container {
+  border-radius: 0 8px;
+  border: none !important;
+  background: transparent !important;
+}
+nav {
+  left: -20px;
+}
+#main-menu {
+  display: block !important;
+  width: var(--mainMenuWidth);
+  background-color: #1f1f1f !important;
+  color: #fff;
+  box-shadow: unset !important;
+}
+
+.header-search {
+  background-color: #181818 !important;
+}
+
+.header-search-select {
+  color: #fff !important;
+}
