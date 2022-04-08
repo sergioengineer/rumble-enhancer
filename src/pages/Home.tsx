@@ -3,7 +3,7 @@ import VideoContainer from "../components/VideoContainer"
 
 const Home: React.FC = () => {
   const [html, setHtml] = useState<string>()
-  const frament = new DocumentFragment()
+  const fragment = new DocumentFragment()
 
   useEffect(() => {
     const makeFetch = async () => {
@@ -17,9 +17,9 @@ const Home: React.FC = () => {
   if (html) {
     const htmlElement = document.createElement("html")
     htmlElement.innerHTML = html
-    frament.append(htmlElement)
+    fragment.append(htmlElement)
     const mediaLinks = (
-      [...frament.querySelectorAll(".mediaList-link")] as HTMLAnchorElement[]
+      [...fragment.querySelectorAll(".mediaList-link")] as HTMLAnchorElement[]
     ).sort((a, b) => (b.href.match(/monark/gi) ? 1 : -1))
 
     return (
