@@ -1,11 +1,15 @@
+/***
+ * Generates the content script which will load our React app code into rumble's page
+ */
+
 const { readdir, writeFile } = require("fs/promises")
 
 /**
- * Gettes the current folder files
+ * Gets all the js and css files in a folder
  * @param {string} folderPath -
  * @returns
  */
-async function getFiles(folderPath) {
+async function getJsAndCssFiles(folderPath) {
   console.log(folderPath)
 
   const dir = await readdir(folderPath, { withFileTypes: true })
@@ -28,7 +32,7 @@ async function getFiles(folderPath) {
 }
 
 ;(async () => {
-  const files = await getFiles(process.cwd() + "/extension/dist/assets")
+  const files = await getJsAndCssFiles(process.cwd() + "/extension/dist/assets")
 
   let jsString = `
   document.body.innerHTML = \`<div id="root"></div>\`
