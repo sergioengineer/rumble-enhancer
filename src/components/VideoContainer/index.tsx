@@ -1,4 +1,5 @@
 import { HTMLProps } from "react"
+import { Link } from "react-router-dom"
 
 interface Props extends HTMLProps<HTMLDivElement> {
   anchor: HTMLAnchorElement
@@ -8,12 +9,17 @@ const VideoContainer: React.FC<Props> = ({ anchor, ...props }) => {
   const heading = anchor.querySelector(".mediaList-heading")?.textContent
 
   return (
-    <div style={{ display: "inline-flex", flexDirection: "column" }} {...props}>
-      <div style={{ width: "100%" }}>
-        <img src={img?.src} width={"100%"}></img>
+    <Link to={anchor.href.replace("https://rumble.com/", "")}>
+      <div
+        style={{ display: "inline-flex", flexDirection: "column" }}
+        {...props}
+      >
+        <div style={{ width: "100%" }}>
+          <img src={img?.src} width={"100%"}></img>
+        </div>
+        <label>{heading}</label>
       </div>
-      <label>{heading}</label>
-    </div>
+    </Link>
   )
 }
 

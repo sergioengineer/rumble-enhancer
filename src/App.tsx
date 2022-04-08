@@ -5,6 +5,7 @@ import "./App.css"
 import Header from "./components/Header"
 import About from "./pages/About"
 import Home from "./pages/Home"
+import VideoPage from "./pages/VideoPage"
 
 const App: React.FC = () => {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         <Header />
         <section className="content">
           <Routes>
+            <Route path="/:id" element={<VideoPage />} />
             <Route path="/about" element={<About />} />
             <Route path="/" element={<Home />} />
           </Routes>
