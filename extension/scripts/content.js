@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   <link rel="stylesheet" href="${chrome.runtime.getURL(
-      "dist/assets/index.2aba2491.css",
+      "dist/assets/index.af37b79c.css",
     )}" />`
     {
         const script = document.createElement("script")
-        script.src = chrome.runtime.getURL("dist/assets/index.699b7939.js")
+        script.src = chrome.runtime.getURL("dist/assets/index.499a212b.js")
         document.body.appendChild(script)
     }

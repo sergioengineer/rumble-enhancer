@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import VideoContainer from "../components/VideoContainer"
 
 const Home: React.FC = () => {
   const [html, setHtml] = useState<string>()
@@ -17,9 +18,18 @@ const Home: React.FC = () => {
     const htmlElement = document.createElement("html")
     htmlElement.innerHTML = html
     frament.append(htmlElement)
-  }
+    const mediaLinks = (
+      [...frament.querySelectorAll(".mediaList-link")] as HTMLAnchorElement[]
+    ).sort((a, b) => (b.href.match(/monark/gi) ? 1 : -1))
 
-  console.log(frament.querySelectorAll(".mediaList-link"))
+    return (
+      <div>
+        {mediaLinks.map((m) => (
+          <VideoContainer anchor={m} />
+        ))}
+      </div>
+    )
+  }
 
   return <div></div>
 }

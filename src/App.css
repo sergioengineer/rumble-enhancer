@@ -1,3 +1,13 @@
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #181818; /* or add it to the track */
+}
+::-webkit-scrollbar-thumb {
+  background: #74a642;
+  border-radius: 2px;
+}
+
 body {
   --header-height: 35px;
   --background-color-darker: #181818;
@@ -22,6 +32,7 @@ code {
   min-height: 100vh;
 }
 .content {
+  display: flex;
   flex-grow: 1;
   margin-top: var(--header-height);
   background-color: var(--background-color-darker);
