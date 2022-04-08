@@ -2,7 +2,7 @@
 
 ## About
 
-Rumble enhacer is a chrome extension which replaces <a href="rumble.com">rumble.com</a>'s default page for a full fledged react app.
+Rumble enhacer is a chrome extension which replaces <a href="https://rumble.com">rumble.com</a>'s default page for a full fledged react app.
 
 ## Contribute
 
