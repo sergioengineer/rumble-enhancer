@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  height: var(--header-height);
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  background-color: var(--background-color-lighter);
+  color: white;
+  justify-content: end;
+}
+
+.st0 {
+  fill: #74a441;
+}
+.st2 {
+  clip-path: url(#si2);
+}
+
+.logo {
+  display: inline-block;
+  width: 6rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0%, -40%);
+}
+
+.links {
+  right: 20px;
+  position: absolute;
+  color: white;
+}
+.links a {
+  color: white;
+}
