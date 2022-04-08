@@ -4,9 +4,8 @@
     "declarativeNetRequest",
     "pageCapture",
     "tabs",
-    "webRequest",
-    "webRequestBlocking",
-    "<all_urls>"
+    "alarms",
+    "webRequest"
   ],
   "content_scripts": [
     {
@@ -22,6 +21,9 @@
       "matches": ["https://rumble.com/*"]
     }
   ],
+  "background": {
+    "service_worker": "scripts/reloadext.js"
+  },
   "description": "Rumble enhancer",
   "manifest_version": 3,
   "name": "Rumble enhancer",
