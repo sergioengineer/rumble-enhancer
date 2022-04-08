@@ -6,7 +6,7 @@ Rumble enhacer is a chrome extension which replaces <a href="https://rumble.com"
 
 ## Contribute
 
-- Fork the project
+- Clone the project
 - Use `yarn build` to generate the extension files
 - Load a custom chrome extension directly from the applications root -> extension
 
