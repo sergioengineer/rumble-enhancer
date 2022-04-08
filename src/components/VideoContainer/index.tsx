@@ -9,8 +9,8 @@ const VideoContainer: React.FC<Props> = ({ anchor, ...props }) => {
 
   return (
     <div style={{ display: "inline-flex", flexDirection: "column" }} {...props}>
-      <div>
-        <img src={img?.src} width={"350px"}></img>
+      <div style={{ width: "100%" }}>
+        <img src={img?.src} width={"100%"}></img>
       </div>
       <label>{heading}</label>
     </div>

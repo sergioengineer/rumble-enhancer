@@ -20,6 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
+  color: white;
 }
 
 code {
@@ -36,4 +37,10 @@ code {
   flex-grow: 1;
   margin-top: var(--header-height);
   background-color: var(--background-color-darker);
+}
+
+.Home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }

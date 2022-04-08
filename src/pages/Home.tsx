@@ -23,9 +23,12 @@ const Home: React.FC = () => {
     ).sort((a, b) => (b.href.match(/monark/gi) ? 1 : -1))
 
     return (
-      <div>
+      <div className="Home">
         {mediaLinks.map((m) => (
-          <VideoContainer anchor={m} />
+          <VideoContainer
+            anchor={m}
+            style={{ width: "240px", marginLeft: "2px", color: "white" }}
+          />
         ))}
       </div>
     )

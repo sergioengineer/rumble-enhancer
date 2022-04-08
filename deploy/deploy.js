@@ -36,7 +36,7 @@ async function getFiles(folderPath) {
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.17e50649.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Rumble Enhanced</title>
   `
 
   for (const file of files.css) {
