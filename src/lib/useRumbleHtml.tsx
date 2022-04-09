@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react"
 
+/**
+ * Makes a request to pageUrl and returns a parsed dom fragment
+ * @param pageUrl - The complete url string
+ * @returns - A dom fragment containing the html nodes of the requested page
+ */
 export default function useRumbleHtml(pageUrl: string) {
   const fragment = new DocumentFragment()
   const [htmlString, setHtmlString] = useState<string>()

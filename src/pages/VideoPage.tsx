@@ -9,12 +9,18 @@ const VideoPage: React.FC = () => {
   const fragment = useRumbleHtml("https://rumble.com/" + id)
 
   if (fragment) {
-    const media = fragment.querySelector("video")
-    console.log(media)
+    const scripts = [...fragment.querySelectorAll("script")]
+    const jsonScript = scripts.find((s) => s.type.includes("ld+json"))
+    const json: Schema[] = JSON.parse(jsonScript?.innerHTML || "")
 
     return (
-      <div>
-        <video height={"500px"} width={"500px"} src={media?.src}></video>
+      <div style={{ width: "100%", minHeight: "100vh" }}>
+        <iframe
+          src={json[0].embedUrl}
+          width={"100%"}
+          height={"56%"}
+          style={{ border: "none" }}
+        ></iframe>
       </div>
     )
   }
@@ -23,3 +29,39 @@ const VideoPage: React.FC = () => {
 }
 
 export default VideoPage
+
+export interface Schema {
+  "@context": string
+  "@type": string
+  name?: string
+  playerType?: string
+  description?: string
+  thumbnailUrl?: string
+  uploadDate?: string
+  duration?: string
+  embedUrl?: string
+  url: string
+  interactionStatistic?: InteractionStatistic
+  width?: number
+  height?: number
+  videoQuality?: string
+  potentialAction?: PotentialAction
+  logo?: string
+  sameAs?: string[]
+}
+
+export interface InteractionStatistic {
+  "@type": string
+  interactionType: InteractionType
+  userInteractionCount: number
+}
+
+export interface InteractionType {
+  "@type": string
+}
+
+export interface PotentialAction {
+  "@type": string
+  target: string
+  "query-input": string
+}

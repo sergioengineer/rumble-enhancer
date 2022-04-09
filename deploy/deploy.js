@@ -35,12 +35,15 @@ async function getJsAndCssFiles(folderPath) {
   const files = await getJsAndCssFiles(process.cwd() + "/extension/dist/assets")
 
   let jsString = `
-  document.body.innerHTML = \`<div id="root"></div>\`
-    document.querySelector("head").innerHTML = \`
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.17e50649.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rumble Enhanced</title>
+  (()=>{
+    if(window.location.href.includes("/embed")) return;
+
+    document.body.innerHTML = \`<div id="root"></div>\`
+      document.querySelector("head").innerHTML = \`
+      <meta charset="UTF-8" />
+      <link rel="icon" type="image/svg+xml" href="/assets/favicon.17e50649.svg" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Rumble Enhanced</title>
   `
 
   for (const file of files.css) {
@@ -57,6 +60,9 @@ async function getJsAndCssFiles(folderPath) {
         document.body.appendChild(script)
     }`
   }
+  jsString += `
+  })()
+  `
 
   await writeFile(process.cwd() + "/extension/scripts/content.js", jsString)
 })()
