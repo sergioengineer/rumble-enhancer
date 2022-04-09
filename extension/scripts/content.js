@@ -10,6 +10,6 @@
     )}" />`
     {
         const script = document.createElement("script")
-        script.src = chrome.runtime.getURL("dist/assets/index.7592f495.js")
+        script.src = chrome.runtime.getURL("dist/assets/index.8910ec0a.js")
         document.body.appendChild(script)
     }

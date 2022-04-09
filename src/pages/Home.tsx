@@ -1,23 +1,10 @@
-import { useEffect, useState } from "react"
 import VideoContainer from "../components/VideoContainer"
+import useRumbleHtml from "../lib/useRumbleHtml"
 
 const Home: React.FC = () => {
-  const [html, setHtml] = useState<string>()
-  const fragment = new DocumentFragment()
+  const fragment = useRumbleHtml("https://rumble.com")
 
-  useEffect(() => {
-    const makeFetch = async () => {
-      const html = await fetch("https://rumble.com").then((r) => r.text())
-      setHtml(html)
-    }
-
-    makeFetch()
-  }, [])
-
-  if (html) {
-    const htmlElement = document.createElement("html")
-    htmlElement.innerHTML = html
-    fragment.append(htmlElement)
+  if (fragment) {
     const mediaLinks = (
       [...fragment.querySelectorAll(".mediaList-link")] as HTMLAnchorElement[]
     ).sort((a, b) => (b.href.match(/monark/gi) ? 1 : -1))
