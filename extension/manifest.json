@@ -13,6 +13,12 @@
       "js": ["scripts/content.js"],
       "run_at": "document_end",
       "all_frames": true
+    },
+    {
+      "matches": ["https://rumble.com/*"],
+      "js": ["scripts/startup-ensure-blank-page.js"],
+      "run_at": "document_start",
+      "all_frames": true
     }
   ],
   "web_accessible_resources": [
