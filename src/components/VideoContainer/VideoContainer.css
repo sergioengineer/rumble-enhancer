@@ -1,0 +1,10 @@
+.video_container {
+  margin: 2px;
+  text-decoration: none;
+  border: 0px solid var(--accent-color);
+}
+.video_container:hover {
+  transition: all 250ms ease-in-out;
+  border: 2px solid var(--accent-color);
+  border-radius: 2px;
+}

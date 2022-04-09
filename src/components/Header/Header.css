@@ -28,7 +28,10 @@
 .links {
   right: 20px;
   position: absolute;
+  display: inline-block;
   color: white;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .links a {
   color: white;

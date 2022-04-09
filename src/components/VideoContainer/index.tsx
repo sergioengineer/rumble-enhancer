@@ -1,5 +1,6 @@
 import { HTMLProps } from "react"
 import { Link } from "react-router-dom"
+import "./VideoContainer.css"
 
 interface Props extends HTMLProps<HTMLDivElement> {
   anchor: HTMLAnchorElement
@@ -9,7 +10,10 @@ const VideoContainer: React.FC<Props> = ({ anchor, ...props }) => {
   const heading = anchor.querySelector(".mediaList-heading")?.textContent
 
   return (
-    <Link to={anchor.href.replace("https://rumble.com/", "")}>
+    <Link
+      to={anchor.href.replace("https://rumble.com/", "")}
+      className={"video_container"}
+    >
       <div
         style={{ display: "inline-flex", flexDirection: "column" }}
         {...props}
