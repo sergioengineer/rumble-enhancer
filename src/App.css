@@ -29,13 +29,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+#root {
+  width: 100vw;
+  min-height: 100vh;
+}
 .app {
   display: flex;
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
+  padding: "0px";
+  margin: none;
 }
 .content {
+  overflow: hidden;
   display: flex;
   flex-grow: 1;
   margin-top: var(--header-height);

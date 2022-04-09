@@ -1,3 +1,4 @@
+import { Grid } from "@nextui-org/react"
 import VideoContainer from "../components/VideoContainer"
 import useRumbleHtml from "../lib/useRumbleHtml"
 
@@ -10,14 +11,14 @@ const Home: React.FC = () => {
     ).sort((a, b) => (b.href.match(/monark/gi) ? 1 : -1))
 
     return (
-      <div className="Home">
+      <Grid.Container className="Home" gap={2} justify={"center"}>
         {mediaLinks.map((m) => (
           <VideoContainer
             anchor={m}
             style={{ width: "240px", marginLeft: "2px", color: "white" }}
           />
         ))}
-      </div>
+      </Grid.Container>
     )
   }
 

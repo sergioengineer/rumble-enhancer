@@ -1,3 +1,4 @@
+import { NextUIProvider } from "@nextui-org/react"
 import * as React from "react"
 import { useState } from "react"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
@@ -11,18 +12,20 @@ const App: React.FC = () => {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="app">
-      <Router>
-        <Header />
-        <section className="content">
-          <Routes>
-            <Route path="/:id" element={<VideoPage />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/" element={<Home />} />
-          </Routes>
-        </section>
-      </Router>
-    </div>
+    <NextUIProvider>
+      <div className="app">
+        <Router>
+          <Header />
+          <section className="content">
+            <Routes>
+              <Route path="/:id" element={<VideoPage />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </section>
+        </Router>
+      </div>
+    </NextUIProvider>
   )
 }
 

@@ -1,5 +1,4 @@
 .header {
-  display: flex;
   height: var(--header-height);
   width: 100vw;
   position: fixed;
