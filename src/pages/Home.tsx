@@ -1,4 +1,4 @@
-import { Grid } from "@nextui-org/react"
+import { Grid, Loading } from "@nextui-org/react"
 import VideoContainer from "../components/VideoContainer"
 import useRumbleHtml from "../lib/useRumbleHtml"
 
@@ -22,7 +22,7 @@ const Home: React.FC = () => {
     )
   }
 
-  return <div></div>
+  return <Loading />
 }
 
 export default Home

@@ -1,5 +1,6 @@
 // A custom hook that builds on useLocation to parse
 
+import { Loading } from "@nextui-org/react"
 import React from "react"
 import { useParams } from "react-router-dom"
 import useRumbleHtml from "../lib/useRumbleHtml"
@@ -25,7 +26,7 @@ const VideoPage: React.FC = () => {
     )
   }
 
-  return <div></div>
+  return <Loading />
 }
 
 export default VideoPage
