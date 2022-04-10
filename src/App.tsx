@@ -11,10 +11,10 @@ import Home from "./pages/Home"
 import VideoPage from "./pages/VideoPage"
 
 const App: React.FC = () => {
+  //TODO: This whole theme logic should be separated into a custom Hook
   const [isDark, setIsDark] = useState(true)
 
   useEffect(() => {
-    // you can use any storage
     let theme = window.localStorage.getItem("data-theme")
     setIsDark(theme === "dark-theme")
 
