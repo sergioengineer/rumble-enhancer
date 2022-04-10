@@ -1,10 +1,10 @@
 .video_container {
   margin: 2px;
   text-decoration: none;
-  border: 0px solid var(--accent-color);
+  border: 0px solid var(--nextui-colors-primary);
 }
 .video_container:hover {
-  transition: all 250ms ease-in-out;
-  border: 2px solid var(--accent-color);
+  transition: all 150ms ease-in-out;
+  border: 2px solid var(--nextui-colors-primary);
   border-radius: 2px;
 }

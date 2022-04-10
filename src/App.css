@@ -49,6 +49,7 @@ code {
   margin-top: var(--header-height);
   margin-left: var(--sidebar-width);
   background-color: var(--nextui-colors-backgroundDark);
+  transition: background-color 250ms ease-in-out;
   border-top: 1px solid #aaa4;
 }
 

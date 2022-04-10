@@ -50,7 +50,7 @@ const lightTheme = createTheme({
       backgroundDark: "#eee",
       background: "#fff",
 
-      text: "#333",
+      text: "#222",
       textLogo: "#74a642",
 
       primaryLight: "#E1F6BA", //  $blue600 on dark mode
