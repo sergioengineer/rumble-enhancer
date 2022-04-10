@@ -1,6 +1,5 @@
 import { NextUIProvider } from "@nextui-org/react"
 import * as React from "react"
-import { useState } from "react"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import "./App.css"
 import Header from "./components/Header"
@@ -11,8 +10,6 @@ import Home from "./pages/Home"
 import VideoPage from "./pages/VideoPage"
 
 const App: React.FC = () => {
-  const [count, setCount] = useState(0)
-
   return (
     <NextUIProvider theme={darkTheme}>
       <div className="app">
