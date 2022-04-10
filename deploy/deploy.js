@@ -64,5 +64,5 @@ async function getJsAndCssFiles(folderPath) {
   })()
   `
 
-  await writeFile(process.cwd() + "/extension/scripts/content.js", jsString)
+  await writeFile(process.cwd() + "/extension/scripts/loadAssets.js", jsString)
 })()

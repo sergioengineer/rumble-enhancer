@@ -1,5 +1,5 @@
 .env
-extension/scripts/content.js
+extension/scripts/loadAssets.js
 
 # Logs
 logs

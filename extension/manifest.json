@@ -10,7 +10,7 @@
   "content_scripts": [
     {
       "matches": ["https://rumble.com/*"],
-      "js": ["scripts/content.js"],
+      "js": ["scripts/loadAssets.js"],
       "run_at": "document_end",
       "all_frames": true
     },
