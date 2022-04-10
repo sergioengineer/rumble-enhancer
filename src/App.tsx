@@ -1,20 +1,43 @@
-import { NextUIProvider } from "@nextui-org/react"
+import { getDocumentTheme, NextUIProvider } from "@nextui-org/react"
 import * as React from "react"
+import { useEffect, useState } from "react"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import "./App.css"
 import Header from "./components/Header"
 import SideBar from "./components/SideBar"
-import { darkTheme } from "./lib/themes"
+import { darkTheme, lightTheme } from "./lib/themes"
 import About from "./pages/About"
 import Home from "./pages/Home"
 import VideoPage from "./pages/VideoPage"
 
 const App: React.FC = () => {
+  const [isDark, setIsDark] = useState(true)
+
+  useEffect(() => {
+    // you can use any storage
+    let theme = window.localStorage.getItem("data-theme")
+    setIsDark(theme === "dark-theme")
+
+    const observer = new MutationObserver((mutation) => {
+      let newTheme = getDocumentTheme(document?.documentElement)
+      localStorage.setItem("data-theme", newTheme)
+      setIsDark(newTheme === "dark-theme")
+    })
+
+    // Observe the document theme changes
+    observer.observe(document?.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme", "style"],
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <NextUIProvider theme={darkTheme}>
+    <NextUIProvider theme={isDark ? darkTheme : lightTheme}>
       <div className="app">
         <Router>
-          <Header />
+          <Header isDark={isDark} setIsDark={setIsDark} />
           <SideBar />
           <section className="content">
             <svg

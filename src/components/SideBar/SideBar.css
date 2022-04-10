@@ -5,7 +5,7 @@
   left: 0;
   top: 0;
   overflow-y: auto;
-  background-color: var(--background-color-lighter);
+  background-color: var(--nextui-colors-backgroundLight);
   z-index: 3;
   text-align: center;
 }
@@ -20,4 +20,8 @@
 .sidebar .logo {
   width: 150px;
   margin-top: 10px;
+}
+
+.sidebar .logo .logoText {
+  fill: var(--nextui-colors-textLogo);
 }

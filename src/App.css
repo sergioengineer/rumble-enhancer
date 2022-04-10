@@ -1,7 +1,9 @@
 ::-webkit-scrollbar {
   width: 5px;
   height: 8px;
-  background-color: #181818; /* or add it to the track */
+  background-color: var(
+    --nextui-colors-backgroundDark
+  ); /* or add it to the track */
 }
 ::-webkit-scrollbar-thumb {
   background: #74a642;
@@ -10,9 +12,6 @@
 
 body {
   --header-height: 60px;
-  --background-color-darker: #191919;
-  --background-color-lighter: #212121;
-  --accent-color: #74a642;
   --sidebar-width: 200px;
 
   margin: 0;
@@ -22,7 +21,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
-  color: white;
+  color: var(--nextui-colors-text);
   overflow-x: hidden;
 }
 
@@ -49,7 +48,7 @@ code {
   flex-grow: 1;
   margin-top: var(--header-height);
   margin-left: var(--sidebar-width);
-  background-color: var(--background-color-darker);
+  background-color: var(--nextui-colors-backgroundDark);
   border-top: 1px solid #aaa4;
 }
 

@@ -3,7 +3,7 @@
   width: 100vw;
   position: fixed;
   top: 0px;
-  background-color: var(--background-color-lighter);
+  background-color: var(--nextui-colors-backgroundLight);
   color: white;
   justify-content: end;
   z-index: 3;
@@ -12,13 +12,12 @@
 .links {
   right: 20px;
   position: absolute;
-  display: inline-block;
+  display: inline-flex;
   color: white;
   top: 50%;
   transform: translateY(-50%);
 }
 .links a {
-  color: white;
   font-size: 17px;
   font-weight: 500;
 }
