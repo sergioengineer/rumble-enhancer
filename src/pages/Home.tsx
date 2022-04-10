@@ -1,6 +1,6 @@
 import { Grid, Loading } from "@nextui-org/react"
 import VideoContainer from "../components/VideoContainer"
-import { useHomeContentProvider } from "../lib/ContentProvider"
+import { useHomeContentProvider } from "../lib/ContentProviders"
 
 const Home: React.FC = () => {
   const content = useHomeContentProvider()

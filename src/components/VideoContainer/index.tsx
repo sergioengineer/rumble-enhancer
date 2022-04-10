@@ -1,6 +1,6 @@
 import { Grid, GridItemProps } from "@nextui-org/react"
 import { Link } from "react-router-dom"
-import { MediaLink } from "../../lib/ContentProvider/useHomeContentProvider"
+import { MediaLink } from "../../lib/ContentProviders/useHomeContentProvider"
 import "./VideoContainer.css"
 
 interface Props extends GridItemProps {

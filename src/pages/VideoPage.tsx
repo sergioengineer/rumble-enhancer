@@ -3,7 +3,7 @@
 import { Loading } from "@nextui-org/react"
 import React from "react"
 import { useParams } from "react-router-dom"
-import useVideoPageContentProvider from "../lib/ContentProvider/useVideoPageContentProvider"
+import { useVideoPageContentProvider } from "../lib/ContentProviders"
 
 const VideoPage: React.FC = () => {
   const { id } = useParams()

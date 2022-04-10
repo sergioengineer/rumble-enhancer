@@ -13,7 +13,7 @@
     )}" />`
     {
         const script = document.createElement("script")
-        script.src = chrome.runtime.getURL("dist/assets/index.666a7f96.js")
+        script.src = chrome.runtime.getURL("dist/assets/index.2f7af364.js")
         document.body.appendChild(script)
     }
   })()

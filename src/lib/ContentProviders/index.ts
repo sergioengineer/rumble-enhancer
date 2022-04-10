@@ -5,5 +5,6 @@
  */
 
 import useHomeContentProvider from "./useHomeContentProvider"
+import useVideoPageContentProvider from "./useVideoPageContentProvider"
 
-export { useHomeContentProvider }
+export { useHomeContentProvider, useVideoPageContentProvider }
