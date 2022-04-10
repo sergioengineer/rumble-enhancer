@@ -3,21 +3,17 @@
 import { Loading } from "@nextui-org/react"
 import React from "react"
 import { useParams } from "react-router-dom"
-import useRumbleHtml from "../lib/useRumbleHtml"
+import useVideoPageContentProvider from "../lib/ContentProvider/useVideoPageContentProvider"
 
 const VideoPage: React.FC = () => {
   const { id } = useParams()
-  const fragment = useRumbleHtml("https://rumble.com/" + id)
+  const content = useVideoPageContentProvider(id || "")
 
-  if (fragment) {
-    const scripts = [...fragment.querySelectorAll("script")]
-    const jsonScript = scripts.find((s) => s.type.includes("ld+json"))
-    const json: Schema[] = JSON.parse(jsonScript?.innerHTML || "")
-
+  if (content) {
     return (
       <div style={{ width: "100%", minHeight: "100vh" }}>
         <iframe
-          src={json[0].embedUrl}
+          src={content.embedUrl}
           width={"100%"}
           height={"76%"}
           style={{ border: "none" }}
@@ -30,39 +26,3 @@ const VideoPage: React.FC = () => {
 }
 
 export default VideoPage
-
-export interface Schema {
-  "@context": string
-  "@type": string
-  name?: string
-  playerType?: string
-  description?: string
-  thumbnailUrl?: string
-  uploadDate?: string
-  duration?: string
-  embedUrl?: string
-  url: string
-  interactionStatistic?: InteractionStatistic
-  width?: number
-  height?: number
-  videoQuality?: string
-  potentialAction?: PotentialAction
-  logo?: string
-  sameAs?: string[]
-}
-
-export interface InteractionStatistic {
-  "@type": string
-  interactionType: InteractionType
-  userInteractionCount: number
-}
-
-export interface InteractionType {
-  "@type": string
-}
-
-export interface PotentialAction {
-  "@type": string
-  target: string
-  "query-input": string
-}

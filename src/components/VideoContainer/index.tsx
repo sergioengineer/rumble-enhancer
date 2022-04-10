@@ -1,24 +1,24 @@
 import { Grid, GridItemProps } from "@nextui-org/react"
 import { Link } from "react-router-dom"
+import { MediaLink } from "../../lib/ContentProvider/useHomeContentProvider"
 import "./VideoContainer.css"
 
 interface Props extends GridItemProps {
-  anchor: HTMLAnchorElement
+  mediaLink: MediaLink
 }
-const VideoContainer: React.FC<Props> = ({ anchor, ...props }) => {
-  const img = anchor.querySelector("img")
-  const heading = anchor.querySelector(".mediaList-heading")?.textContent
-
+const VideoContainer: React.FC<Props> = ({ mediaLink, ...props }) => {
   return (
     <Grid className={"video_container"} {...props}>
-      <Link to={anchor.href.replace("https://rumble.com/", "")}>
+      <Link
+        to={mediaLink?.videoLink?.replace("https://rumble.com/", "") || "/"}
+      >
         <div style={{ display: "inline-flex", flexDirection: "column" }}>
           <div style={{ width: "100%" }}>
-            <img src={img?.src} width={"100%"}></img>
+            <img src={mediaLink.thumbNailSrc} width={"100%"}></img>
           </div>
           <label>
-            {heading?.substring(0, 35)}
-            {heading?.length || 0 > 35 ? "..." : ""}
+            {mediaLink.heading?.substring(0, 35)}
+            {mediaLink.heading?.length || 0 > 35 ? "..." : ""}
           </label>
         </div>
       </Link>

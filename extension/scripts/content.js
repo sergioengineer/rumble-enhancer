@@ -9,11 +9,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Rumble Enhanced</title>
   <link rel="stylesheet" href="${chrome.runtime.getURL(
-      "dist/assets/index.66337ac9.css",
+      "dist/assets/index.a46395cc.css",
     )}" />`
     {
         const script = document.createElement("script")
-        script.src = chrome.runtime.getURL("dist/assets/index.dd8a37a6.js")
+        script.src = chrome.runtime.getURL("dist/assets/index.666a7f96.js")
         document.body.appendChild(script)
     }
   })()

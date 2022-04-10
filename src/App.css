@@ -10,7 +10,7 @@
 
 body {
   --header-height: 60px;
-  --background-color-darker: #181818;
+  --background-color-darker: #191919;
   --background-color-lighter: #212121;
   --accent-color: #74a642;
   --sidebar-width: 200px;
@@ -50,7 +50,7 @@ code {
   margin-top: var(--header-height);
   margin-left: var(--sidebar-width);
   background-color: var(--background-color-darker);
-  border-top: 1px solid #aaa8;
+  border-top: 1px solid #aaa4;
 }
 
 .app * {
@@ -69,7 +69,7 @@ code {
   0% {
     left: -60%;
     bottom: -70%;
-    filter: blur(500px);
+    filter: blur(50px);
   }
   25% {
     left: -45%;
@@ -86,7 +86,7 @@ code {
   100% {
     left: -60%;
     bottom: -70%;
-    filter: blur(500px);
+    filter: blur(50px);
   }
 }
 
@@ -99,7 +99,7 @@ code {
   animation: bkgLogoAnimation 20s linear 0s infinite both;
 }
 .bkgsvg .st0 {
-  fill: #74a441;
+  fill: #74a44122;
 }
 .bkgsvg .st2 {
   clip-path: url(#si2);

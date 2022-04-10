@@ -1,20 +1,16 @@
 import { Grid, Loading } from "@nextui-org/react"
 import VideoContainer from "../components/VideoContainer"
-import useRumbleHtml from "../lib/useRumbleHtml"
+import { useHomeContentProvider } from "../lib/ContentProvider"
 
 const Home: React.FC = () => {
-  const fragment = useRumbleHtml("https://rumble.com")
+  const content = useHomeContentProvider()
 
-  if (fragment) {
-    const mediaLinks = (
-      [...fragment.querySelectorAll(".mediaList-link")] as HTMLAnchorElement[]
-    ).sort((a, b) => (b.href.match(/monark/gi) ? 1 : -1))
-
+  if (content) {
     return (
       <Grid.Container className="Home" gap={2} justify={"center"}>
-        {mediaLinks.map((m) => (
+        {content?.mediaLinks?.map((m) => (
           <VideoContainer
-            anchor={m}
+            mediaLink={m}
             style={{ width: "240px", marginLeft: "2px", color: "white" }}
           />
         ))}
