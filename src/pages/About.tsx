@@ -1,8 +1,18 @@
+import { Text } from "@nextui-org/react"
 const About: React.FC = () => {
   return (
     <div>
-      Rumble enhancer is an extension which completely revamps rumble's UI by
-      replacing it with a custom react app.
+      <Text
+        size={20}
+        css={{
+          textGradient: "45deg, $primaryLight -20%, $primary 60%",
+        }}
+        weight="bold"
+      >
+        Rumble enhancer
+      </Text>{" "}
+      is an extension which completely revamps rumble's UI by replacing it with
+      a custom react app.
       <br />
       This extension has no affiliation with Rumble.com website and is
       maintained through an open source(many collaborators) project.

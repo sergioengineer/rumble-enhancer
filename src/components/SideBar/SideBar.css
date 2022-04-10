@@ -1,0 +1,23 @@
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  background-color: var(--background-color-lighter);
+  z-index: 3;
+  text-align: center;
+}
+.sidebar .st0 {
+  fill: #74a441;
+  fill: #74a44111;
+}
+.sidebar .st2 {
+  clip-path: url(#si2);
+}
+
+.sidebar .logo {
+  width: 150px;
+  margin-top: 10px;
+}

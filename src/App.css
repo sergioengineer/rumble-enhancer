@@ -9,10 +9,11 @@
 }
 
 body {
-  --header-height: 35px;
+  --header-height: 60px;
   --background-color-darker: #181818;
   --background-color-lighter: #212121;
   --accent-color: #74a642;
+  --sidebar-width: 200px;
 
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -42,15 +43,64 @@ code {
   margin: none;
 }
 .content {
+  padding-top: 4px;
   overflow: hidden;
   display: flex;
   flex-grow: 1;
   margin-top: var(--header-height);
+  margin-left: var(--sidebar-width);
   background-color: var(--background-color-darker);
+  border-top: 1px solid #aaa8;
+}
+
+.app * {
+  z-index: 2;
 }
 
 .Home {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+/* Bkp logo animation */
+
+@keyframes bkgLogoAnimation {
+  0% {
+    left: -60%;
+    bottom: -70%;
+    filter: blur(500px);
+  }
+  25% {
+    left: -45%;
+    bottom: -65%;
+  }
+  50% {
+    left: -35%;
+    bottom: -60%;
+  }
+  75% {
+    left: -45%;
+    bottom: -45%;
+  }
+  100% {
+    left: -60%;
+    bottom: -70%;
+    filter: blur(500px);
+  }
+}
+
+.bkgsvg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+
+  z-index: 1;
+  animation: bkgLogoAnimation 20s linear 0s infinite both;
+}
+.bkgsvg .st0 {
+  fill: #74a441;
+}
+.bkgsvg .st2 {
+  clip-path: url(#si2);
 }

@@ -22,7 +22,7 @@ const Home: React.FC = () => {
     )
   }
 
-  return <Loading />
+  return <Loading size="md">Loading...</Loading>
 }
 
 export default Home
