@@ -36,7 +36,12 @@ async function getJsAndCssFiles(folderPath) {
 
   let jsString = `
   (()=>{
-    if(window.location.href.includes("/embed")) return;
+    const bypassUrls = ["embed", "api"]
+    const rumbleBaseUrl = "https://rumble.com/"
+    for(const url of bypassUrls){
+      if(window.location.href.includes(rumbleBaseUrl + url)) return;
+    }
+    
 
     document.body.innerHTML = \`<div id="root"></div>\`
       document.querySelector("head").innerHTML = \`
