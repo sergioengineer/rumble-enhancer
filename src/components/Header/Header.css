@@ -7,7 +7,7 @@
   transition: background-color 250ms ease-in-out;
   color: white;
   justify-content: end;
-  z-index: 3;
+  z-index: 4;
 }
 
 .links {
@@ -21,4 +21,25 @@
 .links a {
   font-size: 17px;
   font-weight: 500;
+}
+
+.header .st0 {
+  fill: #74a441;
+  fill: #74a44122;
+}
+.header .st2 {
+  clip-path: url(#si2);
+}
+
+.header .logo {
+  position: absolute;
+  width: 130px;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+}
+
+.header .logo .logoText {
+  fill: var(--nextui-colors-textLogo);
 }

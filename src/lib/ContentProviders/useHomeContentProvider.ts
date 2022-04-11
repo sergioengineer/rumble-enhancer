@@ -12,12 +12,18 @@ export default function useHomeContentProvider() {
 
   for (const mediaLink of mediaLinks) {
     const img = mediaLink.querySelector("img")
+    const userProfile = mediaLink.querySelector(".user-image")
+    const userProfileSrc = userProfile
+      ? getComputedStyle(userProfile)
+      : undefined
+    console.log(userProfileSrc)
     const heading =
       mediaLink?.querySelector(".mediaList-heading")?.textContent || undefined
     mediaLinkArray.push({
       thumbNailSrc: img?.src,
       heading,
       videoLink: mediaLink.href,
+      userProfileSrc: "",
     })
   }
 
@@ -30,4 +36,5 @@ export interface MediaLink {
   thumbNailSrc?: string
   heading?: string
   videoLink?: string
+  userProfileSrc?: string
 }
