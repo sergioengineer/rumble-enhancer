@@ -23,20 +23,23 @@
   font-weight: 500;
 }
 
+.header .leftSide {
+  position: absolute;
+  display: inline-flex;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .header .st0 {
   fill: #74a441;
-  fill: #74a44122;
+  fill: #fcdf0711;
 }
 .header .st2 {
   clip-path: url(#si2);
 }
 
 .header .logo {
-  position: absolute;
   width: 130px;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
   display: inline-flex;
 }
 

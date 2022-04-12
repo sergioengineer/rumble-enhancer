@@ -9,6 +9,9 @@ const darkTheme = createTheme({
       backgroundDark: "#181818",
       background: "#181818",
 
+      gradient:
+        "linear-gradient(112deg, #74a642 -63.59%, #74a642 -10.3%, #FCDF07 70.46%)",
+
       text: "#fff",
       textLogo: "#fff",
 
@@ -36,7 +39,7 @@ const darkTheme = createTheme({
       error: "#FF4828",
       errorDark: "#DB2A1D",
       errorShadow: "#FFE7D3", // $red600 on dark mode
-      selection: "#B594D6",
+      selection: "#D8BD05",
       link: "#eee",
     },
   },
@@ -49,6 +52,9 @@ const lightTheme = createTheme({
       backgroundLight: "#fff",
       backgroundDark: "#eee",
       background: "#fff",
+
+      gradient:
+        "linear-gradient(112deg, #74a642 -63.59%, #D8BD05 -20.3%, #FCDF07 70.46%)",
 
       text: "#222",
       textLogo: "#74a642",
@@ -77,7 +83,7 @@ const lightTheme = createTheme({
       error: "#FF4828",
       errorDark: "#DB2A1D",
       errorShadow: "#FFE7D3", // $red600 on dark mode
-      selection: "#B594D6",
+      selection: "#D8BD05",
       link: "#333",
     },
   },
