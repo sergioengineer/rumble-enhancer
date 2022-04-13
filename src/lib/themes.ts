@@ -3,6 +3,11 @@ import { createTheme } from "@nextui-org/react"
 const darkTheme = createTheme({
   type: "dark",
   theme: {
+    shadows: {
+      primary: "#D8BD05",
+      background: "#18181888",
+    },
+
     colors: {
       // brand colors
       backgroundLight: "#212121",
@@ -18,7 +23,7 @@ const darkTheme = createTheme({
       primaryLight: "#E1F6BA", //  $blue600 on dark mode
       primary: "#74a642",
       primaryDark: "#5A8E30",
-      primaryShadow: "#F1FADC",
+      primaryShadow: "#5A8E30",
 
       secondaryLight: "#F0DBFA", // $purple600 on dark mode
       secondary: "#B594D6",
@@ -47,6 +52,10 @@ const darkTheme = createTheme({
 const lightTheme = createTheme({
   type: "light",
   theme: {
+    shadows: {
+      primary: "#D8BD05",
+      background: "#18181888",
+    },
     colors: {
       // brand colors
       backgroundLight: "#fff",
@@ -56,7 +65,7 @@ const lightTheme = createTheme({
       gradient:
         "linear-gradient(112deg, #74a642 -63.59%, #D8BD05 -20.3%, #FCDF07 70.46%)",
 
-      text: "#222",
+      text: "#111",
       textLogo: "#74a642",
 
       primaryLight: "#E1F6BA", //  $blue600 on dark mode

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react"
 import Events from "../../lib/events"
+import MenuItem from "../MenuItem"
 import "./SideBar.css"
 const SideBar = () => {
   const sideBarRef = useRef<HTMLDivElement>(null)
@@ -20,7 +21,13 @@ const SideBar = () => {
       document.removeEventListener(Events.toggleSideBar, eventHandler)
   }, [])
 
-  return <div className="sidebar" ref={sideBarRef}></div>
+  return (
+    <div className="sidebar" ref={sideBarRef}>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+    </div>
+  )
 }
 
 export default SideBar

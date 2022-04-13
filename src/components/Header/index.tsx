@@ -15,9 +15,13 @@ const Header: React.FC<Props> = ({ setIsDark, isDark }) => {
   return (
     <div className="header">
       <span className="leftSide">
-        <Button auto light onClick={() => toggleSideBar()}>
-          <AiOutlineMenu style={{ height: "20px", width: "20px" }} />
-        </Button>
+        <Button
+          style={{ padding: "10px" }}
+          auto
+          light
+          onClick={() => toggleSideBar()}
+          icon={<AiOutlineMenu style={{ width: "20px", height: "20px" }} />}
+        />
         <Link to="/" className="logo">
           <FullLogo />
         </Link>
