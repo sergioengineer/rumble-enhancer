@@ -13,8 +13,8 @@ Rumble enhacer is a chrome extension which replaces <a href="https://rumble.com"
 An open source algorithm which recommends new videos for you.
 
 ## Protection for content creators
-This extension is part of a project which aims to allow content creators to migrated from networks(youtube, odysee, rumble) without loosing public.
-As long as your public has this extension installed. They'll get recommendations to watch your videos regardless of where it is hosted.
+This extension is part of a project which aims to allow content creators to migrate from providers(youtube, odysee, rumble) without loosing public.
+As long as your public has this extension installed. They'll get recommendations to watch your videos regardless of where it is hosted in and which of those pages they visit.
 
 
 # Contribute
