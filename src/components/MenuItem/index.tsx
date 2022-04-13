@@ -1,34 +1,32 @@
 import { Text } from "@nextui-org/react"
+import { GiCrown } from "@react-icons/all-files/gi/GiCrown"
 import { Container } from "./style"
 
 const MenuItem = () => {
   return (
     <Container>
-      <Text
-        size={20}
-        weight={"bold"}
-        as={"span"}
+      <div
         style={{
-          position: "absolute",
-          top: "-50%",
-          height: "auto",
-          right: "50%",
-          transform: "translate(50%, 25%)",
+          height: "100%",
+          width: "22px",
+          display: "flex",
+          marginRight: "8px",
+          alignContent: "center",
+          alignItems: "center",
         }}
       >
-        Canal Exemplo
-      </Text>
-      <Text
-        size={10}
-        style={{
-          position: "absolute",
-          bottom: "0",
-          right: "50%",
-          transform: "translateX(50%)",
-        }}
-      >
-        Canal de vídeos
-      </Text>
+        <GiCrown
+          style={{
+            height: "22px",
+            width: "22px",
+          }}
+        />
+      </div>
+      <div style={{ display: "inline-block" }}>
+        <Text size={20} weight={"bold"} as={"span"}>
+          Canal Exemplo
+        </Text>
+      </div>
     </Container>
   )
 }

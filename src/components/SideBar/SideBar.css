@@ -1,5 +1,5 @@
 .sidebar {
-  background-color: var(--nextui-colors-primary);
+  background-color: var(--nextui-colors-sidebarBackground);
   width: 0;
   height: calc(100vh - var(--header-height, 0));
   position: fixed;
@@ -18,9 +18,11 @@
 .sidebar::-webkit-scrollbar {
   width: 5px;
   height: 8px;
-  background-color: var(--nextui-colors-primary); /* or add it to the track */
+  background-color: var(
+    --nextui-colors-sidebarBackground
+  ); /* or add it to the track */
 }
 .sidebar::-webkit-scrollbar-thumb {
-  background: #000;
+  background: var(--nextui-colors-sidebarScrollThumb);
   border-radius: 2px;
 }

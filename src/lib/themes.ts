@@ -14,6 +14,10 @@ const darkTheme = createTheme({
       backgroundDark: "#181818",
       background: "#181818",
 
+      sidebarBackground: "#74a642",
+      sidebarScrollThumb: "#181818",
+      menuItemBackground: "#181818",
+
       gradient:
         "linear-gradient(112deg, #74a642 -63.59%, #74a642 -10.3%, #FCDF07 70.46%)",
 
@@ -58,9 +62,13 @@ const lightTheme = createTheme({
     },
     colors: {
       // brand colors
-      backgroundLight: "#fff",
+      backgroundLight: "#fefefe",
       backgroundDark: "#eee",
-      background: "#fff",
+      background: "#fefefe",
+
+      sidebarBackground: "#fefefe",
+      sidebarScrollThumb: "#74a642",
+      menuItemBackground: "#74a642",
 
       gradient:
         "linear-gradient(112deg, #74a642 -63.59%, #D8BD05 -20.3%, #FCDF07 70.46%)",

@@ -12,7 +12,13 @@ const VideoContainer: React.FC<Props> = ({ mediaLink, ...props }) => {
       <Link
         to={mediaLink?.videoLink?.replace("https://rumble.com/", "") || "/"}
       >
-        <div style={{ display: "inline-flex", flexDirection: "column" }}>
+        <div
+          style={{
+            width: "100%",
+            display: "inline-flex",
+            flexDirection: "column",
+          }}
+        >
           <div style={{ width: "100%" }}>
             <img src={mediaLink.thumbNailSrc} width={"100%"}></img>
           </div>

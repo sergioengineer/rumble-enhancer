@@ -7,11 +7,11 @@ const Home: React.FC = () => {
 
   if (content) {
     return (
-      <Grid.Container className="Home" gap={1} justify={"center"}>
+      <Grid.Container className="Home" gap={3} justify={"center"}>
         {content?.mediaLinks?.map((m) => (
           <VideoContainer
             mediaLink={m}
-            style={{ width: "340px", marginLeft: "2px", color: "white" }}
+            style={{ width: "360px", marginLeft: "2px", color: "white" }}
           />
         ))}
       </Grid.Container>
