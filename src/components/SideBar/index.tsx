@@ -26,6 +26,26 @@ const SideBar = () => {
       <MenuItem></MenuItem>
       <MenuItem></MenuItem>
       <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
+      <MenuItem></MenuItem>
     </div>
   )
 }

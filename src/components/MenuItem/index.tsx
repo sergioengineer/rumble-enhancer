@@ -3,7 +3,7 @@ import { Container } from "./style"
 
 const MenuItem = () => {
   return (
-    <Container color="background">
+    <Container>
       <Text
         size={20}
         weight={"bold"}
@@ -16,7 +16,7 @@ const MenuItem = () => {
           transform: "translate(50%, 25%)",
         }}
       >
-        Monark Talks
+        Canal Exemplo
       </Text>
       <Text
         size={10}
