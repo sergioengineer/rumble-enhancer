@@ -2,9 +2,37 @@
   margin: 2px;
   text-decoration: none;
   border: 0px solid var(--nextui-colors-primary);
+  position: relative;
+
+  --lineHOffset: 12px;
+  --lineVOffset: 10px;
 }
-.video_container:hover {
-  transition: all 150ms ease-in-out;
-  border: 2px solid var(--nextui-colors-primary);
-  border-radius: 2px;
+
+.video_container::after {
+  content: "";
+  position: absolute;
+  bottom: calc(0px + var(--lineVOffset));
+  left: calc(0px + var(--lineHOffset));
+  width: 0px;
+  height: 3px;
+  background-color: var(--nextui-colors-primary);
+  transition: width 150ms ease-in-out;
+}
+
+.video_container::before {
+  content: "";
+  position: absolute;
+  top: calc(0px + var(--lineVOffset));
+  right: calc(0px + var(--lineHOffset));
+  width: 0px;
+  height: 3px;
+  background-color: var(--nextui-colors-primary);
+  transition: width 150ms ease-in-out;
+}
+
+.video_container:hover::after {
+  width: 40%;
+}
+.video_container:hover::before {
+  width: 40%;
 }

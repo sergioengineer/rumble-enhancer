@@ -15,7 +15,7 @@ const VideoPage: React.FC = () => {
         <iframe
           src={content.embedUrl}
           width={"100%"}
-          height={"76%"}
+          height={"80%"}
           style={{ border: "none" }}
         ></iframe>
       </div>

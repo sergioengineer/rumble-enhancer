@@ -9,10 +9,10 @@ const MenuItem = () => {
         style={{
           height: "100%",
           width: "22px",
-          display: "flex",
           marginRight: "8px",
           alignContent: "center",
           alignItems: "center",
+          display: "none",
         }}
       >
         <GiCrown
@@ -22,8 +22,13 @@ const MenuItem = () => {
           }}
         />
       </div>
-      <div style={{ display: "inline-block" }}>
-        <Text size={20} weight={"bold"} as={"span"}>
+      <div style={{ display: "inline-flex" }}>
+        <Text
+          size={20}
+          weight={"bold"}
+          css={{ lineHeight: "normal", fontStyle: "italic" }}
+          as={"span"}
+        >
           Canal Exemplo
         </Text>
       </div>
