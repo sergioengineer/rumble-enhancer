@@ -5,6 +5,7 @@ import { FaSun } from "@react-icons/all-files/fa/FaSun"
 import { Link } from "react-router-dom"
 import Events from "../../lib/events"
 import FullLogo from "../images/FullLogo"
+import SearchBar from "../SearchBar"
 import "./Header.css"
 
 const Header: React.FC<Props> = ({ setIsDark, isDark }) => {
@@ -14,7 +15,7 @@ const Header: React.FC<Props> = ({ setIsDark, isDark }) => {
 
   return (
     <div className="header">
-      <span className="leftSide">
+      <span className="leftPanel">
         <Button
           style={{ padding: "10px" }}
           auto
@@ -26,7 +27,12 @@ const Header: React.FC<Props> = ({ setIsDark, isDark }) => {
           <FullLogo />
         </Link>
       </span>
-      <span className="links">
+
+      <span className="middlePanel">
+        <SearchBar />
+      </span>
+
+      <span className="rightPanel">
         <Link to={"/about"}> About</Link>
         <Switch
           size={"md"}

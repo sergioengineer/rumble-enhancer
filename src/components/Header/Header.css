@@ -1,4 +1,6 @@
 .header {
+  display: flex;
+  align-items: center;
   height: var(--header-height);
   width: 100vw;
   position: fixed;
@@ -6,28 +8,26 @@
   background-color: var(--nextui-colors-backgroundLight);
   transition: background-color 250ms ease-in-out;
   color: white;
-  justify-content: end;
   z-index: 4;
 }
 
-.links {
-  right: 20px;
-  position: absolute;
+.rightPanel {
   display: inline-flex;
   color: white;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-right: 20px;
 }
-.links a {
+.rightPanel a {
   font-size: 17px;
   font-weight: 500;
 }
 
-.header .leftSide {
-  position: absolute;
+.header .leftPanel {
   display: inline-flex;
-  top: 50%;
-  transform: translateY(-50%);
+  height: 100%;
+  justify-self: left;
+}
+.header .middlePanel {
+  flex-grow: 1;
 }
 
 .header .st0 {
