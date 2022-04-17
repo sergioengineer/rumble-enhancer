@@ -39,8 +39,8 @@ const FullLogo = (props: Props) => {
           y2="14.6"
           gradientTransform="matrix(.9939 .02784 -.01545 .9862 -2.9 -4.7)"
         >
-          <stop offset=".3" stopColor="#74a441" stop-opacity="0" />
-          <stop offset="1" stopColor="#4c771f" />
+          <stop offset=".3" stopColor="#3EEB23" stop-opacity="0" />
+          <stop offset="1" stopColor="#3EEB23" />
         </linearGradient>
         <path
           d="M28.7 17.1c0 1.8-2.1 3.8-4.4 5.7l5.3 3.6c3.2-2.4 4.9-4.5 4.9-6.8 0-.6-.1-1.3-.4-1.9C31.9 12.6 23 8.4 16.8 7c5.6 1.6 12 6.4 11.9 10.1z"
@@ -55,8 +55,8 @@ const FullLogo = (props: Props) => {
           y2="10.8"
           gradientTransform="matrix(.9939 .02784 -.01545 .9862 -2.9 -4.7)"
         >
-          <stop offset=".3" stopColor="#74a441" stop-opacity="0" />
-          <stop offset="1" stopColor="#4c771f" />
+          <stop offset=".3" stopColor="#3EEB23" stop-opacity="0" />
+          <stop offset="1" stopColor="#3EEB23" />
         </linearGradient>
       </g>
       <g className="st2">
@@ -69,8 +69,8 @@ const FullLogo = (props: Props) => {
           y2="-7.1"
           gradientTransform="matrix(-.5069 .8385 -.8387 -.511 262.6 -387.1)"
         >
-          <stop offset=".3" stopColor="#74a441" stop-opacity="0" />
-          <stop offset="1" stopColor="#4c771f" />
+          <stop offset=".3" stopColor="#3EEB23" stop-opacity="0" />
+          <stop offset="1" stopColor="#3EEB23" />
         </linearGradient>
         <path
           d="M11.5 26.6c-1.5-.9-2.2-3.7-2.7-6.6l-5.7 2.7c.5 4 1.5 6.5 3.4 7.6.5.3 1.2.5 1.8.6 5.4.8 13.4-4.8 17.6-9.4-3.9 4-11.2 7-14.4 5.1z"
@@ -85,8 +85,8 @@ const FullLogo = (props: Props) => {
           y2="-9.6"
           gradientTransform="matrix(-.5069 .8385 -.8387 -.511 262.6 -387.1)"
         >
-          <stop offset=".3" stopColor="#74a441" stop-opacity="0" />
-          <stop offset="1" stopColor="#4c771f" />
+          <stop offset=".3" stopColor="#3EEB23" stop-opacity="0" />
+          <stop offset="1" stopColor="#3EEB23" />
         </linearGradient>
       </g>
       <g className="st2">
@@ -98,8 +98,8 @@ const FullLogo = (props: Props) => {
           x2="5.9"
           y2="13.8"
         >
-          <stop offset=".3" stopColor="#74a441" stop-opacity="0" />
-          <stop offset="1" stopColor="#4c771f" />
+          <stop offset=".3" stopColor="#3EEB23" stop-opacity="0" />
+          <stop offset="1" stopColor="#3EEB23" />
         </linearGradient>
         <path
           d="M11.9 7c1.6-.9 4.2-.5 6.9.5l.8-5.1C16 .8 13.3.5 11.4 1.5c-.6.3-1 .7-1.5 1.3-3.3 4.4-2.5 14-.7 20-1.4-5.6-.5-14 2.7-15.8z"

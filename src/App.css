@@ -6,7 +6,7 @@
   ); /* or add it to the track */
 }
 ::-webkit-scrollbar-thumb {
-  background: #74a642;
+  background: #44d62c;
   border-radius: 2px;
 }
 
@@ -71,16 +71,16 @@ code {
     filter: blur(50px);
   }
   25% {
-    left: -45%;
+    left: -55%;
     bottom: -65%;
   }
   50% {
-    left: -35%;
+    left: -50%;
     bottom: -60%;
   }
   75% {
-    left: -45%;
-    bottom: -45%;
+    left: -55%;
+    bottom: -65%;
   }
   100% {
     left: -60%;
@@ -98,7 +98,7 @@ code {
   animation: bkgLogoAnimation 20s linear 0s infinite both;
 }
 .bkgsvg .st0 {
-  fill: #74a44122;
+  fill: #44d62c22;
 }
 .bkgsvg .st2 {
   clip-path: url(#si2);

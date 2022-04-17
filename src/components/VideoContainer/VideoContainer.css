@@ -34,5 +34,5 @@
   width: 40%;
 }
 .video_container:hover::before {
-  width: 40%;
+  width: 20%;
 }

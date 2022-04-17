@@ -21,9 +21,15 @@
       "all_frames": true
     },
     {
-      "matches": ["https://rumble.com/*"],
+      "matches": ["https://rumble.com/embed/*"],
       "js": ["scripts/preselect-embed-video-quality.js"],
       "run_at": "document_idle",
+      "all_frames": true
+    },
+    {
+      "matches": ["https://rumble.com/embed/*"],
+      "js": ["scripts/add-styling-embed-video.js"],
+      "run_at": "document_start",
       "all_frames": true
     }
   ],

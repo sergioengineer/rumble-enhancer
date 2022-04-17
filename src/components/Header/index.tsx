@@ -35,10 +35,10 @@ const Header: React.FC<Props> = ({ setIsDark, isDark }) => {
       <span className="rightPanel">
         <Link to={"/about"}> About</Link>
         <Switch
-          size={"md"}
+          size={"sm"}
           checked={isDark}
           onChange={() => setIsDark((s) => !s)}
-          style={{ marginLeft: "15px", marginTop: "-3px" }}
+          style={{ marginLeft: "15px", marginTop: "-5px" }}
           iconOn={<BsMoon />}
           iconOff={<FaSun fill="var(--nextui-colors-warningDark)" />}
         ></Switch>

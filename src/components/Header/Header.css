@@ -15,6 +15,7 @@
   display: inline-flex;
   color: white;
   margin-right: 20px;
+  align-items: center;
 }
 .rightPanel a {
   font-size: 17px;
@@ -31,8 +32,8 @@
 }
 
 .header .st0 {
-  fill: #74a441;
-  fill: #74a44111;
+  fill: var(--nextui-colors-primary);
+  fill: #3eeb2311;
 }
 .header .st2 {
   clip-path: url(#si2);
