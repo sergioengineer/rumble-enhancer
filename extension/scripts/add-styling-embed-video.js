@@ -1,14 +1,19 @@
+const primaryColor = "44d62c"
+
 var observer = new MutationObserver(function (mutations) {
   mutations.forEach(function (mutation) {
     for (const addedNode of mutation.addedNodes) {
       const nodeName = addedNode.nodeName.toLowerCase()
       if (nodeName === "script")
-        addedNode.innerHTML = addedNode.innerHTML.replace("75a642", "44d62c")
+        addedNode.innerHTML = addedNode.innerHTML.replace(
+          "75a642",
+          primaryColor,
+        )
       if (nodeName === "head") {
         const style = document.createElement("style")
         style.innerHTML = `
             .bigPlayUIInner{
-                background: #44d62c !important;
+                background: #${primaryColor} !important;
             }
         `
 

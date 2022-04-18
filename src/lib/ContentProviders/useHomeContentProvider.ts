@@ -19,11 +19,16 @@ export default function useHomeContentProvider() {
     console.log(userProfileSrc)
     const heading =
       mediaLink?.querySelector(".mediaList-heading")?.textContent || undefined
+    const author =
+      mediaLink?.querySelector(".mediaList-by-heading")?.textContent ||
+      undefined
+
     mediaLinkArray.push({
       thumbNailSrc: img?.src,
       heading,
       videoLink: mediaLink.href,
       userProfileSrc: "",
+      author,
     })
   }
 
@@ -37,4 +42,5 @@ export interface MediaLink {
   heading?: string
   videoLink?: string
   userProfileSrc?: string
+  author?: string
 }

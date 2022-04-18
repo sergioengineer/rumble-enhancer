@@ -1,4 +1,4 @@
-import { Grid, GridItemProps } from "@nextui-org/react"
+import { Grid, GridItemProps, Text } from "@nextui-org/react"
 import { Link } from "react-router-dom"
 import { MediaLink } from "../../lib/ContentProviders/useHomeContentProvider"
 import "./VideoContainer.css"
@@ -22,10 +22,13 @@ const VideoContainer: React.FC<Props> = ({ mediaLink, ...props }) => {
           <div style={{ width: "100%" }}>
             <img src={mediaLink.thumbNailSrc} width={"100%"}></img>
           </div>
-          <label>
-            {mediaLink.heading?.substring(0, 35)}
-            {mediaLink.heading?.length || 0 > 35 ? "..." : ""}
-          </label>
+          <Text weight={"semibold"}>
+            {mediaLink.heading?.substring(0, 86)}
+            {(mediaLink.heading?.length || 0) > 86 ? "..." : ""}
+          </Text>
+          <Text weight={"semibold"} size={13} color="$gray500">
+            {mediaLink.author}
+          </Text>
         </div>
       </Link>
     </Grid>
